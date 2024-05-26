@@ -1,0 +1,60 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>전주 맛집</h1>
+    <hr>
+    <header style="border-bottom: 1px solid #aaa; margin-bottom: 10px; padding-bottom: 10px;">
+        <nav>
+            <a href="/neighborhood/진북동"> 진북동 </a>  |
+            <a href="/neighborhood/중화산동"> 중화산동 </a>  |
+            <a href="/neighborhood/효자동"> 효자동</a>  | 
+            <a href="/neighborhood/금암동"> 금암동</a>  | 
+            <a href="/neighborhood/중앙동"> 중앙동</a>  | 
+            <a href="/neighborhood/서신동"> 서신동</a>  | 
+            <a href="/neighborhood/평화동"> 평화동</a>  | 
+            <a href="/neighborhood/삼천동"> 삼천동</a>  | 
+            <a href="/neighborhood/덕진동"> 덕진동</a>  | 
+            <a href="/neighborhood/우아동"> 우아동</a>  | 
+            <a href="/neighborhood/송천동"> 송천동</a>  | 
+        </nav>
+    </header>
+
+    <h2>맛집 추가</h2>
+    <form action="/addRestaurant" method="POST">
+        <label for="name">맛집 이름:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="location">위치:</label>
+        <select id="location" name="location" required>
+            <option value="진북동">진북동</option>
+            <option value="중화산동">중화산동</option>
+            <option value="효자동">효자동</option>
+            <option value="금암동">금암동</option>
+            <option value="서신동">서신동</option>
+            <option value="평화동">평화동</option>
+            <option value="삼천동">삼천동</option>
+            <option value="덕진동">덕진동</option>
+            <option value="우아동">우아동</option>
+            <option value="송천동">송천동</option>
+        </select><br><br>
+
+        <label for="category">음식 종류:</label>
+        <select id="category" name="category" required>
+            <option value="한식">한식</option>
+            <option value="양식">양식</option>
+            <option value="중식">중식</option>
+            <option value="일식">일식</option>
+            <option value="분식">분식</option>
+        </select><br><br>
+
+        <button type="submit">추가</button>
+    </form>
+</body>
+</html>
